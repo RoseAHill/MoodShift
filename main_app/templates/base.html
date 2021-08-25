@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MoodShift</title>
+  {% block head %}
+  {% endblock %}
+</head>
+<body>
+  <header>
+    <div class="header-logo-container">
+      <a href="/">
+        <img
+          src=""
+          alt="MoodShift Logo"
+        >
+      </a>
+    </div>
+    <h2>Hello, guest</h2>
+    <nav>
+      <button>Log in</button>
+    </nav>
+    <hr />
+  </header>
+  <main>
+    {% block content %}
+    {% endblock %}
+  </main>
+</body>
+</html>
