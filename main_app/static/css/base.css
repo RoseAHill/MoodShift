@@ -1,15 +1,241 @@
+html {
+  box-sizing: border-box
+}
+
+/* The Universal Selector */
+*, /* All elements*/
+*::before, /* All ::before pseudo-elements */
+*::after { /* All ::after pseudo-elements */
+  /* height & width will now include border & padding by default
+     but can be over-ridden as needed */
+  box-sizing: inherit;
+}
+
 :root {
-  --mood-white: #F9F6F0;
-  --mood-black: #070600;
-  --mood-pink: #FFB6DB;
-  --mood-blue: #6DB6FF;
-  --mood-green: #24FF24;
-  --mood-yellow: #FFFF6D;
-  --mood-orange: #DB6D00;
-  --mood-dark-blue: #004949;
-  --mood-purple: #490092;
+  /* resets font size to be 62.5% of the user preference - 
+       in most browser configurations this will be 10px */
+  font-size: 62.5%;
+  /* color-blind friendly palette */
+  --color-white: #F9F6F0;
+  --color-black: #070600;
+  --color-pink: #FFB6DB;
+  --color-green: #24FF24;
+  --color-blue: #6DB6FF;
+  --color-yellow: #FFFF6D;
+  --color-orange: #DB6D00;
+  --color-red: #920000;
+  --color-dark-blue: #004949;
+  --color-purple: #490092;
 }
 
 body {
-  background-color: var(--mood-white);
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--color-white);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  --main-text: var(--color-black);
+  --main-bg: var(--color-white);
+  --color-outline: var(--color-dark-blue);
+  --normal-outline: var(--color-black);
+  --link-color: var(--color-dark-blue);
+  --mood-annoyed: var(--color-red);
+  --mood-overwhelmed: var(--color-purple);
+  --mood-meh: var(--color-orange);
+  --mood-okay: var(--color-yellow);
+  --mood-good: var(--color-green);
+  --mood-great: var(--color-blue);
+  --mood-fantastic: var(--color-pink);
+  --borders: var(--color-outline) solid 2px;
+  --card-box-shadow: 5px 5px 6px -1px #AAA;
+  --font-xtreme: 4.2rem;
+  --font-xxl: 3.6rem;
+  --font-xl: 2.4rem;
+  --font-l: 1.8rem;
+  --font-reg: 1.6rem;
+  --card-border-radius: 6px;
+}
+
+
+header {
+  width: 100%;
+  border-bottom: var(--borders);
+  display: flex;
+  justify-content: space-between;
+}
+
+nav {
+  margin: 10px;
+}
+
+ul {
+  margin: 0;
+  list-style: none;
+  padding: 0;
+}
+
+main {
+  width: 100%;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--link-color);
+  font-weight: 600;
+  font-size: 16px;
+  padding: 10px 20px;
+  border: var(--borders);
+  border-radius: 12px;
+}
+
+nav a:hover {
+  text-decoration: underline;
+  border-radius: 8px;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+nav li {
+  padding: 5px 8px;
+}
+
+.header-logo-container img {
+  padding: 10px 20px 0;
+  height: 50px;
+}
+
+.page-header {
+  display: flex;
+  align-items: center;
+  margin: 20px;
+}
+
+.btn {
+  font-size: var(--font-l);
+  padding: 8px 16px;
+  border-radius: 6px;
+  border-width: 2px;
+  border-style: solid;
+  text-decoration: none;
+  background-color: var(--button-bg);
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+  margin-right: 10px;
+}
+
+.btn:hover {
+  background-color: var(--button-bg-hover);
+}
+
+.submit {
+  color: var(--submit);
+  border-color: var(--submit);
+}
+
+.secondary {
+  color: var(--secondary);
+  border-color: var(--secondary);
+}
+
+.warn {
+  color: var(--warn);
+  border-color: var(--warn);
+}
+
+.danger {
+  color: var(--danger);
+  border-color: var(--danger);
+}
+
+.page-header h1 {
+  font-size: var(--font-xxl);
+  margin: 0;
+}
+
+@media only screen and (min-width: 768px) {
+  header {
+    position: sticky;
+    display: flex;
+    flex-direction: row;
+    top: 0;
+    align-items: center;
+  }
+
+  main {
+    max-width: 1300px;
+    min-height: calc(100vh - 53px);
+  }
+
+  nav {
+    margin-left: auto;
+    display: flex;
+    justify-content: center;
+  }
+
+  .page-header h1 {
+    font-size: var(--font-xtreme);
+  }
+  
+  .page-header img {
+    height: 50px;
+    margin-left:20px;
+  }
+  
+  .page-header img:first-of-type {
+    margin-left: 25px;
+  }
+
+  @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+    header {
+      background: var(--nav-bg);
+      -webkit-backdrop-filter: blur(3px);
+      backdrop-filter: blur(3px);
+    }
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  main {
+    min-height: calc(100vh - 55px);
+  }
+  
+  header {
+    margin: 20px 20px 0 20px;
+    width: calc(100vw - 40px);
+    max-width: 1920px;
+    top: 20px;
+    background-color: transparent;
+    border-bottom: none;
+  }
+
+  .header-logo-container {
+    /* visual fix to help align logo */
+    padding-top: 6px;
+    width: 256px;
+    height: 35px;
+  }
+
+  @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+    header {
+      -webkit-backdrop-filter: none;
+      backdrop-filter: none;
+    }
+
+    nav,
+    .header-logo-container {
+      background: rgba(104, 197, 248, .6);
+      -webkit-backdrop-filter: blur(3px);
+      backdrop-filter: blur(3px);
+    }
+  }
 }
