@@ -1,9 +1,16 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
+  {% comment %} <link
+    rel="shortcut icon"
+    type="image/png"
+    href="{% static 'images/splash.svg' %}"
+  > {% endcomment %}
   <title>MoodShift</title>
   {% block head %}
   {% endblock %}
@@ -12,10 +19,7 @@
   <header>
     <div class="header-logo-container">
       <a href="/">
-        <img
-          src=""
-          alt="MoodShift Logo"
-        >
+        <h1>MoodShift</h1>
       </a>
     </div>
     <h2>Hello, guest</h2>

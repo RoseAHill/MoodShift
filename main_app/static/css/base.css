@@ -1,0 +1,15 @@
+:root {
+  --mood-white: #F9F6F0;
+  --mood-black: #070600;
+  --mood-pink: #FFB6DB;
+  --mood-blue: #6DB6FF;
+  --mood-green: #24FF24;
+  --mood-yellow: #FFFF6D;
+  --mood-orange: #DB6D00;
+  --mood-dark-blue: #004949;
+  --mood-purple: #490092;
+}
+
+body {
+  background-color: var(--mood-white);
+}
