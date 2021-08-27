@@ -60,7 +60,6 @@ body {
   --card-border-radius: 6px;
 }
 
-
 header {
   width: 100%;
   border-bottom: var(--borders);
@@ -68,6 +67,7 @@ header {
   justify-content: space-between;
 }
 
+/* 
 nav {
   margin: 10px;
 }
@@ -219,7 +219,7 @@ nav li {
   }
 
   .header-logo-container {
-    /* visual fix to help align logo */
+    
     padding-top: 6px;
     width: 256px;
     height: 35px;
@@ -238,4 +238,4 @@ nav li {
       backdrop-filter: blur(3px);
     }
   }
-}
+} */
