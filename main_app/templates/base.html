@@ -5,11 +5,11 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}">
   <link
     rel="shortcut icon"
     type="image/png"
-    href="{% static 'images/temp-moodshift-icon.png' %}"
+    href="{% static 'images/M-icon.png' %}"
   >
   <title>MoodShift</title>
   {% block head %}
@@ -17,14 +17,10 @@
 </head>
 <body>
   <header>
-    <div class="header-logo-container">
-      <a href="/">
-        <img src="{% static 'images/temp-moodshift-logo.png' %}" alt="">
-      </a>
-    </div>
-    <h2>Hello, guest</h2>
+      <a href="/" class="title-font">MoodShift</a>
+    <h3>Hello, guest</h3>
     <nav>
-      <a href="/">Log in</a>
+      <a href="/" class="buttons">Log in</a>
     </nav>
   </header>
   <main>
