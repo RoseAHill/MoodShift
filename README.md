@@ -1,4 +1,4 @@
-# Moodshift
+# MoodShift
 
 > "Knowing yourself is the beginning of all wisdom"
 > -Aristotle
