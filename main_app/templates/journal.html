@@ -1,9 +1,44 @@
 {% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+  
+{% endblock head  %}
 
 {% block content %}
 
 {{ cal|safe }}
 
-{{ cal }}
+{% for entry in entries %}
+  <div class="offcanvas offcanvas-bottom" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvas{{ entry.date.day }}" aria-labelledby="offcanvas{{ entry.date.day }}">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvas{{ entry.date.day }}Label">I was {{entry.mood.alias}}</h5>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <p>{{ entry.description }}</p>
+    </div>
+  </div>
+{% endfor %}
+
+{% comment %} <table border="0" cellpadding="0" cellspacing="0" class="month">
+<tr>
+  <th colspan="7" class="month">{{ month }} {{ year }}</th>
+</tr>
+<tr>
+  <th class="mon">Mon</th>
+  <th class="tue">Tue</th>
+  <th class="wed">Wed</th>
+  <th class="thu">Thu</th>
+  <th class="fri">Fri</th>
+  <th class="sat">Sat</th>
+  <th class="sun">Sun</th>
+</tr>
+{% for entry in entries %}
+
+{% endfor %}
+
+</table> {% endcomment %}
+
 
 {% endblock %}
