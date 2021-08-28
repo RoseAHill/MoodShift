@@ -1,9 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Mali&family=Open+Sans&display=swap");
 
-html {
-  box-sizing: border-box;
-}
-
 /* The Universal Selector */
 *, /* All elements*/
 *::before, /* All ::before pseudo-elements */
@@ -11,7 +7,7 @@ html {
   /* All ::after pseudo-elements */
   /* height & width will now include border & padding by default
      but can be over-ridden as needed */
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 
 :root {
@@ -116,33 +112,51 @@ header h3 {
   font-size: var(--font-xxl);
 }
 
+/* home page & entry form */
+
+
+
+/* about page */
+
+.about {
+  max-width: 150rem;
+  padding: 10rem;
+}
+
 /* calendar */
 
 table {
+  text-align: center;
   border-spacing: 3rem;
+  border-collapse: separate;
   empty-cells: hide;
 }
 
 td {
-  padding: 4rem;
-  border: var(--borders);
+  height: 12rem;
+  width: 12rem;
   border-radius: 2rem;
   position: relative;
   background-color: var(--color-grey);
+  font-size: var(--font-xxl);
+  text-align: center;
 }
 
-td > * {
-  position: absolute;
-  top: 0;
-  right: 0;
+.moodshift-emoji {
+  background-color: inherit;
+  border-radius: inherit;
+  border: none;
+  height: 100%;
+  width: 100%;
 }
 
 td:hover {
-  filter: opacity(50%);
+  filter: opacity(80%);
 }
 
 td.noday {
-  display: none;
+  visibility: hidden;
+  padding: 3rem;
 }
 
 td.fantastic {
@@ -165,10 +179,12 @@ td.meh {
   background-color: var(--mood-meh);
 }
 
-td.annoyed {
+td.annoyed * {
   background-color: var(--mood-annoyed);
+  color: var(--color-white);
 }
 
-td.overwhelmed {
+td.overwhelmed * {
   background-color: var(--mood-overwhelmed);
+  color: var(--color-white);
 }
