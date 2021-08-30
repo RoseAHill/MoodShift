@@ -5,7 +5,7 @@
 
 ## About
 
-The best way to control your mood is to know your mood. This is the foundation phrase for MoodShift and why MoodShift was created.
+The first step to controlling your mood is to know your mood. This is the foundation phrase for MoodShift and why MoodShift was created.
 
 Life is a medley of positive and negative emotion; joy, stress, anxiety, excitement, fear, pleasure, wonder... the list goes on. This is all part of what makes us human. It's normal to feel caught up in all this. It's normal to be lost in your own head. It's fine to feel overwhelmed sometimes, or even most times. While it may be normal to have these feelings, the last thing anyone wants is to let emotions have control over your life.
 
