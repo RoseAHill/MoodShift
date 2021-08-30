@@ -185,34 +185,6 @@ input:checked + label {
   border-bottom: var(--color-outline) solid 5px;
 }
 
-.fa-laugh-beam {
-  color: var(--mood-fantastic);
-}
-
-.fa-smile-beam {
-  color: var(--mood-great);
-}
-
-.fa-smile {
-  color: var(--mood-good);
-}
-
-/* .fa-meh {
-  color: var(--mood-okay);
-} */
-
-.fa-frown {
-  color: var(--mood-meh);
-}
-
-.fa-angry {
-  color: var(--mood-annoyed);
-}
-
-.fa-tired {
-  color: var(--mood-overwhelmed);
-}
-
 #description-textarea {
   display: flex;
   flex-direction: column;
