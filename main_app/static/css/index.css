@@ -98,6 +98,11 @@ header h3 {
   flex-basis: 20rem;
 }
 
+main {
+  width: 100%;
+  text-align: center;
+}
+
 .buttons {
   padding: 1rem 1.5rem;
   margin: 1rem;
@@ -112,9 +117,51 @@ header h3 {
   font-size: var(--font-xxl);
 }
 
+.submit {
+  padding: 1rem 1.5rem;
+  margin: 1rem;
+  border: var(--borders);
+  border-radius: 1rem;
+}
+
+img.logo {
+  width: 8rem;
+  height: 8rem;
+}
+
 /* home page & entry form */
 
+/* user auth */
 
+.main-auth {
+  width: 100%;
+  height: 100%;
+  margin: 6rem auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.main-auth .display {
+  max-width: 40rem;
+}
+
+.main-auth .login-signup {
+  min-width: 50rem;
+}
+
+.signup{
+  text-align: right;
+}
+
+li {
+  list-style: none;
+  padding-top: 1rem;
+}
+
+.red-text {
+  color: var(--color-red);
+}
 
 /* about page */
 
@@ -171,11 +218,11 @@ td.good {
   background-color: var(--mood-good);
 }
 
-td.okay {
+td.neutral {
   background-color: var(--mood-okay);
 }
 
-td.meh {
+td.down {
   background-color: var(--mood-meh);
 }
 

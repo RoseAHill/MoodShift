@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="main-auth">
+<section class="display">
+<br><br><br>
+<h2>A tracker for your daily moods and a journal for self reflection</h2>
+<br><br><br><br><br><br><br><br><br><br>
+<h3><span class="quote">"</span>Until you make the unconscious conscious, it will direct your life and you will call it fate.<span class="quote">"</span></h3>
+<h4>-Carl Gustav Jung</h4>
+</section>
+
+<section class="login-signup">
+  <br><br><br><br><br><br><br>
+  <div class="signup">
+  <form action="{% url 'signup' %}" method="post" class="form-container" autocomplete="off">
+    <h1>Signup</h1>
+    {% csrf_token %}
+    <ul>
+    {{ form.as_ul }}
+    </ul>
+    <button type="submit" class="btn submit">Sign-up</button>
+  </form>
+  </div>
+</section>
+</div>
+{% endblock %}

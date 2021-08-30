@@ -6,13 +6,12 @@
 {% endblock head  %}
 
 {% block content %}
-
 {{ cal|safe }}
 
 {% for entry in entries %}
-  <div class="offcanvas offcanvas-bottom" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvas{{ entry.date.day }}" aria-labelledby="offcanvas{{ entry.date.day }}">
+  <div class="offcanvas offcanvas-bottom" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvas{{ entry.entryDate|date:"j" }}" aria-labelledby="offcanvas{{ entry.entryDate|date:"j" }}">
     <div class="offcanvas-header">
-      <h5 class="offcanvas-title" id="offcanvas{{ entry.date.day }}Label">I was {{entry.mood.alias}}</h5>
+      <h5 class="offcanvas-title" id="offcanvas{{ entry.entryDate|date:"j" }}Label">I was {{ entry.mood }}</h5>
       <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="offcanvas-body">

@@ -15,8 +15,8 @@
   <link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}">
   <link
     rel="shortcut icon"
-    type="image/png"
-    href="{% static 'images/M-icon.png' %}"
+    type="image/svg"
+    href="{% static 'images/logo.svg' %}"
   >
   <title>MoodShift</title>
   {% block head %}
@@ -24,10 +24,19 @@
 </head>
 <body>
   <header>
-      <a href="/" class="title-font">MoodShift</a>
+      <a href="/" class="title-font">
+      <img class="logo" type="image/svg" src="{% static 'images/logo.svg' %}" alt="MoodShift logo, M with an arrow"></a>
+    {% if not user.is_authenticated %}
     <h3>Hello, guest</h3>
+    {% else %}
+    <h3>Hello, {{ user.username }}</h3>
+    {% endif %}
     <nav>
-      <a href="/" class="buttons">Log in</a>
+      {% if user.is_authenticated %}
+      <a href="/journal" class="buttons">Journal</a>
+      {% else %}
+      <a href="/accounts/signup" class="buttons">Log in</a>
+      {% endif %}
     </nav>
   </header>
   <main>
