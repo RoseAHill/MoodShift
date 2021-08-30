@@ -33,6 +33,7 @@
     {% endif %}
     <nav>
       {% if user.is_authenticated %}
+      <a href="/journal/entry" class="buttons">Add Entry</a>
       <a href="/journal" class="buttons">Journal</a>
       {% else %}
       <a href="/accounts/signup" class="buttons">Log in</a>

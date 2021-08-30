@@ -8,6 +8,7 @@ from django.contrib.auth.views import LoginView
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
 from .models import Entry
+from .forms import EntryForm
 import html
 import calendar
 from calendar import HTMLCalendar, month
@@ -24,19 +25,22 @@ today = date.today()
 class EntryCreate(LoginRequiredMixin, CreateView):
   model = Entry
   fields = ['entryDate', 'description', 'mood']
-
+  success_url = '/journal/'
   def form_valid(self, form):
     form.instance.user = self.request.user
     return super().form_valid(form)
+  
 
 class EntryDelete(LoginRequiredMixin, DeleteView):
   model = Entry
   success_url = f'/journal/{today.year}/{today.month}/'
 
-def home(request):
-  return render(request, 'home.html', {
-    'this_month': today.month,
-    'this_year': today.year,
+@login_required
+def entryHome(request):
+  entry_form = EntryForm()
+  print(entry_form)
+  return render(request, 'entryHome.html', {
+    'entry_form': entry_form,
   })
 
 def about(request):

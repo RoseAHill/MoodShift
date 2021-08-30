@@ -1,14 +1,15 @@
 {% extends 'base.html' %}
 
+{% block head %}
+{% endblock head %}
+
 {% block content %}
 <section class="entry-form">
 <h2>How are you feeling today?</h2>
 </section>
 
 <section class="login-or-entry">
-  {% if user.is_authenticated %}
-  <form action="{% url 'entry_create' %}" method="post"></form>
-  {% else %}
+  {% if not user.is_authenticated %}
   <form action="{% url 'home' %}" method="post" class="login">
     <h1>Login</h1>
     {% csrf_token %}
@@ -16,7 +17,27 @@
     <input type="hidden" name="next" value="{{ next }}">
     <button type="submit" class="btn submit">Login</button>
   </form>
+  {% else %}
+  <a href="/journal/entry" class="buttons">Add an Entry</a>
   {% endif %}
 </section>
+
+<script>
+const moods = {
+  fantastic: "Yay! That's so awesome!",
+  great: "That's great to hear!",
+  good: "I'm glad you're doing well.",
+  neutral: "That's better than not okay, so I'm glad!",
+  down: "That's understandable, we all have those days.",
+  annoyed: "That must be frustrating.",
+  overwhelmed: "Take one step at a time and take deep breaths. Everything is going to be okay.",
+}
+
+function showHideReaction(mood) {
+  var checkedMood = document.getElementById(`checkbox-${mood}`)
+  var reactionText = document.getElementById('reaction-msg')
+  reactionText.innerHTML = moods[mood]
+}
+</script>
 
 {% endblock %}

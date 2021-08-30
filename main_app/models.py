@@ -5,7 +5,7 @@ from .moods import moodChoices
 
 class Entry(models.Model):
   entryDate = models.DateField(
-    default=date(2021, 1, 1)
+    default=date.today
   )
   description = models.TextField(max_length=1000)
   mood = models.CharField(

@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<form action="{% url 'entry_create' %}" method="post" class="entry-form">
+    {% csrf_token %}
+    {{ entry_form.as_p }}
+    {% comment %} <div class="emojis">
+      <input type="radio" id="checkbox-fantastic" name="mood" onClick="showHideReaction('fantastic')" />
+      <label class="check-label" for="checkbox-fantastic"><i class="far fa-laugh-beam"></i></label>
+      <input type="radio" id="checkbox-great" name="mood" onClick="showHideReaction('great')" />
+      <label class="check-label" for="checkbox-great"><i class="far fa-smile-beam"></i></label>
+      <input type="radio" id="checkbox-good" name="mood" onClick="showHideReaction('good')" />
+      <label class="check-label" for="checkbox-good"><i class="far fa-smile"></i></label>
+      <input type="radio" id="checkbox-neutral" name="mood" onClick="showHideReaction('neutral')" />
+      <label class="check-label" for="checkbox-neutral"><i class="far fa-meh"></i></label>
+      <input type="radio" id="checkbox-down" name="mood" onClick="showHideReaction('down')" />
+      <label class="check-label" for="checkbox-down"><i class="far fa-frown"></i></label>
+      <input type="radio" id="checkbox-annoyed" name="mood" onClick="showHideReaction('annoyed')" />
+      <label class="check-label" for="checkbox-annoyed"><i class="far fa-angry"></i></label>
+      <input type="radio" id="checkbox-overwhelmed" name="mood" onClick="showHideReaction('overwhelmed')" />
+      <label class="check-label" for="checkbox-overwhelmed"><i class="far fa-tired"></i></label>
+    </div>
+    <h2 id="reaction-msg"></h2>
+    <div id="description-textarea">
+      <label for="description">Do you want to tell me about it?</label>
+      <textarea id="description" name="description" rows="8" cols="50" maxlength="900"></textarea>
+    </div> {% endcomment %}
+    <button type="submit" class="btn submit">Add to Tracker</button>
+  </form>
+  {% endblock %}

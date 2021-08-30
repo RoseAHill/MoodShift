@@ -4,7 +4,7 @@ moods = {
   "good": {"reaction": "I'm glad you're doing well.", "faicon": "smile"},
   "neutral": {"reaction": "That's better than not okay, so I'm glad!", "faicon": "meh"},
   "down": {"reaction": "That's understandable, we all have those days.", "faicon": "frown"},
-  "annoyed": {"reaction": "", "faicon": "angry"},
+  "annoyed": {"reaction": "That sounds frustrating.", "faicon": "angry"},
   "overwhelmed": {"reaction": "Take one step at a time and take deep breaths. Everything is going to be okay.", "faicon": "tired"},
 }
 
