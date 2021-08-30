@@ -15,3 +15,39 @@ As the Swiss psychiatrist and founder of analytical psychology wrote:
 > -Carl Gustav Jung
 
 Self reflection is important, especially for those who find themselves being caught up in emotion. But I know first hand, that's easier said than done. That is why I decided to create MoodShift, a tracker for your daily moods and a journal for self reflection.
+
+## Getting Started
+
+Fun fact: The app is colorblind friendly!
+
+[Track your mood on MoodShift](https://moodshift.herokuapp.com/)
+
+[Trello board](https://trello.com/b/yoW2Xbrj/moodshift)
+
+[Wireframe and ERD](https://whimsical.com/moodshift-6dpkn8ck883ZEj6HefCm3p)
+
+## Images
+
+![Login page](https://i.imgur.com/hUMCZsP.png)
+
+![Entry page](https://i.imgur.com/CZyzYS6.png)
+
+![Calendar View](https://i.imgur.com/jwTT2oO.png)
+
+## Technology Used
+
+- Python
+- Django
+- CSS
+- HTML
+- Javascript
+- Bootstrap
+- Font Awesome
+
+## Next Steps
+
+- Add an edit button for entries
+- Validation for duplicate entries
+- Styling improvements
+- Mobile view
+- More accessibility features
