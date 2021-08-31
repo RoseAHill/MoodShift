@@ -20,7 +20,7 @@ Self reflection is important, especially for those who find themselves being cau
 
 Fun fact: The app is colorblind friendly!
 
-[Track your mood on MoodShift](https://moodshift.herokuapp.com/)
+[Track your mood on MoodShift](https://moodshift.herokuapp.com/accounts/signup/)
 
 [Trello board](https://trello.com/b/yoW2Xbrj/moodshift)
 
